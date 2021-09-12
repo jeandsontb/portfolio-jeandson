@@ -1,14 +1,15 @@
 import React from 'react';
 
-const App = (props) => {
+const App = ({repoData, user}) => {
   return (
-    <div>
-      <h1>Bem vindo</h1>
-      <div>{props.currentDate}</div>
-      {props.repoData.map((data) => {
+    <div className="container mx-auto">
+      <h1 className="text-5xl">Jeandson</h1>
+      <p>GitHub stats: public repos: {user.public_repos} / public_gists: {user.public_gists} / followers: {user.followers}</p>
+      <h2 className="font-bold text-3xl">Meus repositórios no GitHub</h2>
+      {repoData.map((data) => {
         return (
-          <div key={data.id}>
-            <h3>{data.full_name}</h3>
+          <div key={data.id} className="rounded bg-gray-200 mx-8 my-4 p-4 hover:shadow-md">
+            <h3 className="font-bold">{data.full_name}</h3>
             <p>Language: {data.language} / Stars: {data.stargazers_count}</p>
           </div>
         );
@@ -18,6 +19,9 @@ const App = (props) => {
 }
 
 export async function getServerSideProps(context) {
+
+  const resUser = await fetch('https://api.github.com/users/jeandsontb');
+  const user = await resUser.json();
 
   const repository = await fetch('https://api.github.com/users/jeandsontb/repos?sort=update');
   const originalRepoData = await repository.json();
@@ -42,6 +46,7 @@ export async function getServerSideProps(context) {
     props: {
       currentDate: new Date().toString(),
       repoData,
+      user
     }
   }
 }
