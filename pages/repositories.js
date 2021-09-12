@@ -4,7 +4,7 @@ import getUser from '../utils/back';
 const App = ({repoData, user}) => {
   return (
     <div className="container mx-auto">
-      <h1 className="text-5xl">Jeandson</h1>
+      <h1 className="text-5xl">Jeandson meus repositorios</h1>
       <p>GitHub stats: public repos: {user.public_repos} / public_gists: {user.public_gists} / followers: {user.followers}</p>
       <h2 className="font-bold text-3xl">Meus repositórios no GitHub</h2>
       {repoData.map((data) => {
