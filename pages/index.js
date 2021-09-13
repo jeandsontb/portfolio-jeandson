@@ -1,9 +1,18 @@
 import React from 'react';
 import getUser from '../utils/back';
+import styled from 'styled-components';
+
+const Component = styled.div`
+
+  h1 {
+    font-family: 'Monoton', cursive;
+  }
+`;
+
 
 const App = ({repoData, user}) => {
   return (
-    <div className="container mx-auto">
+    <Component className="container mx-auto">
       <h1 className="text-5xl">Jeandson</h1>
       <p>GitHub stats: public repos: {user.public_repos} / public_gists: {user.public_gists} / followers: {user.followers}</p>
       <h2 className="font-bold text-3xl">Meus repositórios no GitHub</h2>
@@ -15,7 +24,7 @@ const App = ({repoData, user}) => {
           </div>
         );
       })}
-    </div>
+    </Component>
   );
 }
 
