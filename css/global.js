@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
   };
   body {
-    background-color: rgb(243, 116, 116);
+    background-color: #131A40;
   }
 `
 

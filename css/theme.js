@@ -13,8 +13,9 @@ const theme = {
   }
 }
 
-// FONT MONOTION --> font-family: 'Monoton', cursive;
+// FONT MONOTION --> font-family: 'Monoton', sans-serif;
 // FONT RUSSO ONE ---> font-family: 'Russo One', sans-serif;
+// FONT TRAIN ONE ---> 'Train One', sans-serif
 // FONT ROBOTO --> 300, 400, 700
 
 export default theme;
