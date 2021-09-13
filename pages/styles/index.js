@@ -110,7 +110,7 @@ export default {
   Experience: styled.div`
     width: 80%;
     margin-left: 10%;
-    background-color: ${theme.colors.OrangeStrong};
+    background-color: ${theme.colors.yellowActive};
     padding: 40px 20px 40px 20px;
     border-radius: 10px;
     box-shadow: 0 0 8px #F29F05;
@@ -144,7 +144,7 @@ export default {
     display: flex;
     width: 80%;
     margin-left: 10%;
-    background-color: ${theme.colors.OrangeStrong};
+    background-color: ${theme.colors.yellowActive};
     padding: 30px 15px 30px 15px;
     border-radius: 10px;
     box-shadow: 0 0 8px #F29F05;
@@ -174,5 +174,11 @@ export default {
       color: ${theme.colors.browRelative};
       font-size: 16px;
     }
+  `,
+  Footer: styled.div`
+    margin-top: 50px;
+    width: 100%;
+    height: 100px;
+    background-color: ${theme.colors.OrangeStrong};
   `,
 }
