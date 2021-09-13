@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import theme from '../../css/theme';
 
 const  background = '/images/background.gif';
 
-const Styled = {
+export default {
   Component: styled.div`
     .headerBackground {
       background-image: url(${background});
@@ -53,6 +54,47 @@ const Styled = {
       color: #FFFFFF;
       font-size: 18px;
     }
+
+    div {
+      margin-top: 20px;
+      border: 1px solid ${theme.colors.yellowActive};
+      border-radius: 5px;
+      padding: 20px 10px;
+      width: 280px;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 15px;
+      margin-bottom: 10px;
+    }
+
+    span {
+      font-family: 'Ubuntu', sans-serif;
+      color: #FFF;
+      font-size: 14px;
+    }
+
+
+      .contact {
+        font-family: 'Russo One', sans-serif;
+        color: #FFFFFF;
+        font-size: 18px;
+        width: 120px;
+        background-color: ${theme.colors.browRelative};
+        margin-left: 20px;
+        text-align: center;
+        margin-top: -35px;
+        margin-bottom:15px;
+      }
+
+      .contactDesc {
+        font-family: 'Ubuntu', sans-serif;
+        color: #FFFFFF;
+        font-size: 14px;
+      }
+    }
   `,
   RightHeader: styled.div`
     position: relative;
@@ -64,8 +106,73 @@ const Styled = {
       position: absolute;
       bottom: 0;
     }
+  `,
+  Experience: styled.div`
+    width: 80%;
+    margin-left: 10%;
+    background-color: ${theme.colors.OrangeStrong};
+    padding: 40px 20px 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #F29F05;
+
+    h1 {
+      font-family: 'Russo One', sans-serif;
+      color: ${theme.colors.browRelative};
+      font-size: 26px;
+      text-align: center;
+      text-shadow: 0 0 2px #000;
+    }
+
+    p {
+      font-family: 'Ubuntu', sans-serif;
+      color: ${theme.colors.browRelative};
+      font-size: 18px;
+    }
   `, 
 
-}
+  TitleWhite: styled.div`
+    font-family: 'Russo One', sans-serif;
+    color: #FFFFFF;
+    font-size: 26px;
+    text-align: center;
+    text-shadow: 0 0 2px #000;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  `,
 
-export default Styled;
+  BoxEducation: styled.div`
+    display: flex;
+    width: 80%;
+    margin-left: 10%;
+    background-color: ${theme.colors.OrangeStrong};
+    padding: 30px 15px 30px 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #F29F05;
+
+    div {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+    }
+
+    h2 {
+      font-family: 'Russo One', sans-serif;
+      color: ${theme.colors.browRelative};
+      font-size: 20px;
+      text-shadow: 0 0 2px #000;
+    }
+
+    h3 {
+      font-family: 'Ubuntu', sans-serif;
+      color: ${theme.colors.browRelative};
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    p {
+      font-family: 'Ubuntu', sans-serif;
+      color: ${theme.colors.browRelative};
+      font-size: 16px;
+    }
+  `,
+}
