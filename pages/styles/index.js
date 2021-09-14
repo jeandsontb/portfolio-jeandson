@@ -31,6 +31,11 @@ export default {
     margin-left: 10%;
     height: 480px;
     margin-top: -500px;
+
+    @media screen and (max-width: 780px) {
+      width: 90%;
+      margin-left: 5%;
+    }
   `,
   LeftHeader: styled.div`
     display: flex;
@@ -50,11 +55,6 @@ export default {
       font-family: 'Russo One', sans-serif;
     }
 
-    p {
-      color: #FFFFFF;
-      font-size: 18px;
-    }
-
     div {
       margin-top: 20px;
       border: 1px solid ${theme.colors.yellowActive};
@@ -68,6 +68,12 @@ export default {
       justify-content: space-between;
       margin: 0 15px;
       margin-bottom: 10px;
+
+      .iconHeader {
+        color: #FFFFFF;
+        width: 60px;
+        height: 60px;
+      }
     }
 
     span {
@@ -88,12 +94,41 @@ export default {
         margin-top: -35px;
         margin-bottom:15px;
       }
+    }
 
-      .contactDesc {
-        font-family: 'Ubuntu', sans-serif;
-        color: #FFFFFF;
-        font-size: 14px;
+    @media screen and (max-width: 780px) {
+      h1 {
+        font-size: 16px;
       }
+      h2 {
+        font-size: 20px;
+      }
+      div {
+        width: auto;
+
+        ul {
+          margin: 0px;
+          margin-bottom: 5px;
+
+          .iconHeader {
+            color: #FFFFFF;
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        span {
+          font-size: 11px;
+        }
+
+        .contact {
+          font-size: 12px;
+          width: 90px;
+          margin-left: 10px;
+          margin-top: -30px;
+          margin-bottom:8px;
+        }
+      }      
     }
   `,
   RightHeader: styled.div`
@@ -105,6 +140,13 @@ export default {
       height: 400px;
       position: absolute;
       bottom: 0;
+    }
+
+    @media screen and (max-width: 780px) {
+      img {
+        height: auto;
+        right: 0;
+      }
     }
   `,
   Experience: styled.div`
@@ -128,6 +170,21 @@ export default {
       color: ${theme.colors.browRelative};
       font-size: 18px;
     }
+
+    @media screen and (max-width: 780px) {
+      width: 96%;
+      margin-left: 2%;
+      padding: 20px 6px 20px 6px;
+      border-radius: 5px;
+
+      h1 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
   `, 
 
   TitleWhite: styled.div`
@@ -138,6 +195,11 @@ export default {
     text-shadow: 0 0 2px #000;
     margin-top: 60px;
     margin-bottom: 30px;
+
+    @media screen and (max-width: 780px) {
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
   `,
 
   BoxEducation: styled.div`
@@ -173,6 +235,31 @@ export default {
       font-family: 'Ubuntu', sans-serif;
       color: ${theme.colors.browRelative};
       font-size: 16px;
+    }
+
+    @media screen and (max-width: 780px) {
+      flex-direction: column;
+      width: 96%;
+      margin-left: 2%;
+      padding: 20px 6px 5px 6px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px #F29F05;
+
+      div {
+        margin-bottom: 15px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      h3 {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 14px;
+      }
     }
   `,
   Footer: styled.div`

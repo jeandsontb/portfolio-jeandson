@@ -31,9 +31,9 @@ const App = ({repoData, user}) => {
         <div>
           <h2 className="contact">CONTACT</h2>
           <ul>
-            <li><FaFacebookSquare className="text-6xl" style={{color:'#FFFFFF'}}/></li>
-            <li><FaLinkedin className="text-6xl" style={{color:'#FFFFFF'}}/></li>
-            <li><FaGithub className="text-6xl" style={{color:'#FFFFFF'}}/></li>
+            <li><FaFacebookSquare className="iconHeader"/></li>
+            <li><FaLinkedin className="iconHeader"/></li>
+            <li><FaGithub className="iconHeader"/></li>
           </ul>
 
           <span>Or drop a line: jeandsontb@gmail.com</span>
@@ -71,16 +71,16 @@ const App = ({repoData, user}) => {
 
       <Styled.TitleWhite>TECH CONTRIBUTIONS</Styled.TitleWhite>
 
-        <p className="text-1xl font-bold text-center uppercase mt-10 text-white" style={{marginTop: -30}} >
+        <p className="text-1xl font-bold text-center uppercase mt-10 text-white" style={{marginTop: -20}} >
           GitHub stats: <RiGitRepositoryLine className="inline-block" /> {user.public_repos} 
           / < GoGist className="inline-block"/> {user.public_gists} 
           / <FiUsers className="inline-block" /> {user.followers}
         </p>
 
-        <div className="grid grid-cols-3 gap-4 my-6">
+        <div className="md:grid md:grid-cols-3 md:gap-4 md:my-6">
           {repoData.map((data) => {
             return (
-              <div key={data.id} className="rounded bg-gray-200 p-4 hover:shadow-md">
+              <div key={data.id} className="my-2 md:my-0 mx-1 rounded bg-gray-200 p-4 hover:shadow-md">
                 <h3 className="font-bold hover:underline">
                   <a href={"https://github.com/"+ data.full_name}>{data.full_name}
                   </a>
