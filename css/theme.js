@@ -9,7 +9,8 @@ const theme = {
     browStrong: '#590202',
     yellowActive: '#F2E205',
     yellowBurned: '#F2CB05',
-    OrangeStrong: '#F29F05'
+    OrangeStrong: '#F29F05',
+    grayClean: '#F29F05'
   }
 }
 

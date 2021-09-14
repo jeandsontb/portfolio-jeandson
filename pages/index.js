@@ -2,10 +2,11 @@ import React from 'react';
 import Head from 'next/head';
 import getUser from '../utils/back';
 import Styled from './styles';
-import { FaFacebookSquare, FaLinkedin, FaGithub, FaStar } from 'react-icons/fa';
-import { RiGitRepositoryLine } from 'react-icons/ri';
-import { GoGist } from 'react-icons/go';
-import { FiUsers } from 'react-icons/fi';
+import Header from '../components/header';
+import Experience from '../components/experience';
+import Education from '../components/education';
+import Contribution from '../components/contribution';
+import Footer from '../components/footer';
 
 const App = ({repoData, user}) => {
   return (
@@ -19,84 +20,25 @@ const App = ({repoData, user}) => {
       </Head>
 
       <div className="headerBackground">
-        <div className="gradientHorizontal" />
         <div className="gradientVertical" />
+        <div className="gradientHorizontal" />
       </div>
         
-      <Styled.Header>
-        <Styled.LeftHeader>
-        <h1>JEANDSON TENORIO</h1>
-        <h2>FULLSTACK DEVELOPER AND MOBILE</h2>        
 
-        <div>
-          <h2 className="contact">CONTACT</h2>
-          <ul>
-            <li><FaFacebookSquare className="iconHeader"/></li>
-            <li><FaLinkedin className="iconHeader"/></li>
-            <li><FaGithub className="iconHeader"/></li>
-          </ul>
-
-          <span>Or drop a line: jeandsontb@gmail.com</span>
-        </div>
-        
-        </Styled.LeftHeader>
-
-        <Styled.RightHeader>
-          <img src="/images/avatar.png" />
-        </Styled.RightHeader>
-      </Styled.Header>
-
-      <Styled.Experience>
-        <h1>WHAT I DO</h1>
-        <p>Fullstack Developer</p>
-      </Styled.Experience>
+      <Header />
+      
+      <Experience />
 
       <Styled.TitleWhite>MY EDUCATION</Styled.TitleWhite>
 
-      <Styled.BoxEducation>
-        <div>
-          <h2>SPECIALIST DEGREE</h2>
-          <h3>FULLSTACK WEB DEVELOPMENT</h3>
-          <p>UNYLEYA</p>
-        </div>
-        <div>
-          <h2>GRADUATION DEGREE</h2>
-          <h3>WEB DESIGN AND PROGRAMMING</h3>
-          <p>UNISUL - university south of santa catarina</p>
-        </div>        
-      </Styled.BoxEducation>
-      
-
-      <div className="container mx-auto">
+      <Education />      
 
       <Styled.TitleWhite>TECH CONTRIBUTIONS</Styled.TitleWhite>
 
-        <p className="text-1xl font-bold text-center uppercase mt-10 text-white" style={{marginTop: -20}} >
-          GitHub stats: <RiGitRepositoryLine className="inline-block" /> {user.public_repos} 
-          / < GoGist className="inline-block"/> {user.public_gists} 
-          / <FiUsers className="inline-block" /> {user.followers}
-        </p>
+      <Contribution repoData={repoData} user={user}/>      
 
-        <div className="md:grid md:grid-cols-3 md:gap-4 md:my-6">
-          {repoData.map((data) => {
-            return (
-              <div key={data.id} className="my-2 md:my-0 mx-1 rounded bg-gray-200 p-4 hover:shadow-md">
-                <h3 className="font-bold hover:underline">
-                  <a href={"https://github.com/"+ data.full_name}>{data.full_name}
-                  </a>
-                </h3>
-                <p>
-                  Language: {data.language} / <FaStar className="inline-block" /> Stars:  {data.stargazers_count}
-                </p>
-              </div>
-            );
-          })}
-        </div>
-      </div>
+      <Footer />
 
-      <Styled.Footer>
-
-      </Styled.Footer>
     </Styled.Component>
   );
 }
