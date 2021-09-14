@@ -12,9 +12,9 @@ const Header = () => {
         <div>
           <h2 className="contact">CONTACT</h2>
           <ul>
-            <li><FaFacebookSquare className="iconHeader"/></li>
-            <li><FaLinkedin className="iconHeader"/></li>
-            <li><FaGithub className="iconHeader"/></li>
+            <li><a href="https://www.facebook.com/jeandsonnn" target="_blank"><FaFacebookSquare className="iconHeader"/></a></li>
+            <li><a href="https://www.linkedin.com/in/jeandson/" target="_blank"><FaLinkedin className="iconHeader"/></a></li>
+            <li><a href="https://github.com/jeandsontb" target="_blank"><FaGithub className="iconHeader"/></a></li>
           </ul>
 
           <span>Or drop a line: jeandsontb@gmail.com</span>

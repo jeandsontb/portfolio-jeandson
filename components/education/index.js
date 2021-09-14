@@ -1,20 +1,31 @@
 import React from 'react';
 import Styled from './style';
 
+import colegeCourse from '../../pages/api/getExperience';
+
 const Education = () => {
   return (
-    <Styled.BoxEducation>
-      <div>
-        <h2>SPECIALIST DEGREE</h2>
-        <h3>FULLSTACK WEB DEVELOPMENT</h3>
-        <p>UNYLEYA</p>
-      </div>
-      <div>
-        <h2>GRADUATION DEGREE</h2>
-        <h3>WEB DESIGN AND PROGRAMMING</h3>
-        <p>UNISUL - university south of santa catarina</p>
-      </div>        
-    </Styled.BoxEducation>
+    <Styled.BoxContainer>
+      <Styled.BoxEducation>
+        {colegeCourse[0].higher.map((item, index) => (
+          <div key={index}>
+            <h2>{item.level}</h2>
+            <h3>{item.curse}</h3>
+            <p>{item.unity}</p>
+          </div>
+        ))}
+        </Styled.BoxEducation>
+
+        <Styled.BoxTechnician>
+          {colegeCourse[0].technician.map((item, index) => (
+            <div className="technician" key={index}>
+              <h2>{item.level}</h2>
+              <h3>{item.curse}</h3>
+              <p>{item.unity}</p>
+            </div>
+          ))}
+        </Styled.BoxTechnician>    
+      </Styled.BoxContainer>
   );
 }
 

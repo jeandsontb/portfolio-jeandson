@@ -22,6 +22,8 @@ export default {
       font-family: 'Ubuntu', sans-serif;
       color: ${theme.colors.browRelative};
       font-size: 18px;
+      margin-top: 10px;
+      text-align: justify;
     }
 
     @media screen and (max-width: 780px) {

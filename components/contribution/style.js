@@ -23,7 +23,7 @@ export default {
       margin-top: 30px;
     }
     .box-tech {
-      background-color: #D3D3D3;
+      background-color: ${theme.colors.grayClean};
       padding: 10px;
       border-radius: 5px;
       transition: all ease 0.1s;

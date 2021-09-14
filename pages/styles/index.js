@@ -38,10 +38,4 @@ export default {
       margin-bottom: 15px;
     }
   `,
-  Footer: styled.div`
-    margin-top: 50px;
-    width: 100%;
-    height: 100px;
-    background-color: ${theme.colors.OrangeStrong};
-  `,
 }

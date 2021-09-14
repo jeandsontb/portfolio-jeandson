@@ -10,7 +10,7 @@ const theme = {
     yellowActive: '#F2E205',
     yellowBurned: '#F2CB05',
     OrangeStrong: '#F29F05',
-    grayClean: '#F29F05'
+    grayClean: '#D3D3D3'
   }
 }
 
