@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import theme from '../../css/theme';
 
 const  background = '/images/background.gif';
 
