@@ -12,7 +12,7 @@
 
 ## 💻 Sobre o Projeto
 
-Projeto portfólio online com integração a API do GitHub e usando o next para o frontend e outras tecnologias. projeto desenvolvido no curso Fullstack Master - DevPleno.
+Projeto portfólio online com integração a API do GitHub e usando NextJS + SSR (Server Side Rendering) para o frontend e outras tecnologias. projeto desenvolvido no curso Fullstack Master - DevPleno.
 
 ### Interface Web
 
